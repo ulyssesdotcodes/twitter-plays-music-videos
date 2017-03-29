@@ -61,6 +61,6 @@ client.stream('statuses/filter', {track: 'youtu be music'},  function(stream) {
 });
 
 
-server.listen(3000, function () {
+server.listen(config.get("server").port, function () {
   console.log('Example app listening on port 3000!')
 })
