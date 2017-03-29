@@ -14,7 +14,7 @@ var connections = []
 var youtubeRe = /youtu\.be\/([^?]*)/
 var latest = "";
 
-app.get('/', function (req, res) {
+app.get(config.get("server").url + '/', function (req, res) {
   res.sendFile(path.join(__dirname+'/index.html'))
 })
 
