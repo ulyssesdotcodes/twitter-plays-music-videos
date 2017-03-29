@@ -85,7 +85,7 @@
 
     setInterval(function(){eligibleForUpdate = true;}, 16000);
 
-    var url = "ws://" + document.URL.substr(7).split('/')[0];
+    var url = "wss://" + document.URL.substr(8);
     
     var wsCtor = window['MozWebSocket'] ? MozWebSocket : WebSocket;
     this.socket = new wsCtor(url, 'twitter-plays-music-videos');
